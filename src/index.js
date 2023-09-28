@@ -1,6 +1,6 @@
 import _, { last } from 'lodash';
 import './style.css';
-import img from './logo.png';
+import Logo from './logo.png';
 
 
 let content = document.getElementById("content");
@@ -21,6 +21,11 @@ function createElements() {
     for (let i = 0; i < liArray.length; i++) {
         console.log(liArray[i]);
     }
+    const logo = new Image();
+    logo.src = Logo;
+    liArray[0].appendChild(logo);
+    logo.setAttribute("id", "logo");
+    console.log(logo);
 
     liArray[1].textContent = "Home";
     liArray[2].textContent = "Menu";
