@@ -16,11 +16,9 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -41,12 +39,6 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
 
 * {
   background-color: black;
@@ -68,6 +60,7 @@ h1 {
 }
 #main {
   display: flex;
+  align-items: center;
   flex-direction: column;
 
 }
@@ -107,14 +100,15 @@ li {
   padding: 65px;
   padding-top: 50px;
   gap: 20px;
-  background-color: white(255, 0, 0, 0.3);
 }
+
 #hours {
   display: flex;
   font-size: 30px;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
+  margin: 30px;
 }
 tr {
   font-size: 20px;
@@ -126,10 +120,27 @@ tr {
 #hoursContent {
   display: flex;
   justify-content: center;
+  background-color: rgb(255 255 255 / 14%);
+  border-radius: 50px;
+  width: 674px;
 }
+
 th {
   padding-bottom: 10px;
 }
-li:hover {
+li:hover{
   text-decoration: underline;
+}
+#story p:nth-child(2){
+  background-color: rgb(255 255 255 / 14%);
+  padding: 32px;
+  text-align: center;
+  border-radius: 50px;
+}
+td, th {
+  text-align: center;
+  padding: 8px;
+}
+#hours, table {
+  background-color: #64748b;
 }
