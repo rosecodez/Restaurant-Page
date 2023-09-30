@@ -69,6 +69,7 @@ h1 {
 #main {
   display: flex;
   flex-direction: column;
+
 }
 a {
   color: wheat;
@@ -106,7 +107,29 @@ li {
   padding: 65px;
   padding-top: 50px;
   gap: 20px;
+  background-color: white(255, 0, 0, 0.3);
+}
+#hours {
+  display: flex;
+  font-size: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 tr {
   font-size: 20px;
+  display: flex;
+  gap: 49px;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+#hoursContent {
+  display: flex;
+  justify-content: center;
+}
+th {
+  padding-bottom: 10px;
+}
+li:hover {
+  text-decoration: underline;
 }

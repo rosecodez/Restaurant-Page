@@ -22,16 +22,17 @@ function createHomeTab(liArray) {
             const hours = document.createElement("div");
             hoursContent.appendChild(hours);
             hours.setAttribute("id", "hours");
+            hours.textContent = "Hours";
             const table = document.createElement("table");
             hours.appendChild(table);
             const program = [
-                                { day: "Sunday", hour: "Closed"},
-                                { day: "Monday", hour: "12-8pm"},
-                                { day: "Tuesday", hour: "12-8pm"},
-                                { day: "Wednesday", hour: "12-8pm"},
-                                { day: "Thursday", hour: "12-8pm"},
-                                { day: "Friday", hour: "12-10pm"},
-                                { day: "Saturday", hour: "12-10pm"},
+                                { Day: "Sunday", Program: "Closed"},
+                                { Day: "Monday", Program: "12-8pm"},
+                                { Day: "Tuesday", Program: "12-8pm"},
+                                { Day: "Wednesday", Program: "12-8pm"},
+                                { Day: "Thursday", Program: "12-8pm"},
+                                { Day: "Friday", Program: "12-10pm"},
+                                { Day: "Saturday", Program: "12-10pm"},
                             ];
 
             function generateTableHead(table, data) {
@@ -48,7 +49,7 @@ function createHomeTab(liArray) {
             function generateTable(table, data) {
               for (let element of data) {
                 let row = table.insertRow();
-                for (key in element) {
+                for (const key in element) {
                   let cell = row.insertCell();
                   let text = document.createTextNode(element[key]);
                   cell.appendChild(text);
