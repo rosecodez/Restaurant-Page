@@ -1,7 +1,8 @@
 import _, { last } from 'lodash';
 import './style.css';
 import Logo from './logo.png';
-
+import { createHomeTab } from "./home.js";
+import { createMenuTab } from "./menu.js";
 
 let content = document.getElementById("content");
 function createElements() {
@@ -21,16 +22,17 @@ function createElements() {
     for (let i = 0; i < liArray.length; i++) {
         console.log(liArray[i]);
     }
+
     const logo = new Image();
     logo.src = Logo;
     liArray[0].appendChild(logo);
     logo.setAttribute("id", "logo");
     console.log(logo);
 
-    liArray[1].textContent = "Home";
-    liArray[2].textContent = "Menu";
+    createHomeTab(liArray);
+    createMenuTab(liArray);
+
     liArray[3].textContent = "Contact";
-    liArray[4].textContent = "Join us";
     const button = document.createElement("button");
     liArray[5].appendChild(button);
     button.textContent = "Reservation";
@@ -51,9 +53,5 @@ function createElements() {
                 const header = document.createElement("h1");
                 header.setAttribute("id", "header");
                 header.textContent = "Sushi Workshop";
-
-    const array = [];
-    array.push(ol);
-    return array;
 }
 console.log(createElements());
