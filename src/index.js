@@ -1,10 +1,9 @@
 import _, { last } from 'lodash';
 import './style.css';
 import Logo from './logo.png';
-import img1 from './sushi.jpg';
+import img from './homeimage.jpeg';
 import { createHomeTab } from "./home.js";
 import { createMenuTab } from "./menu.js";
-
 
 let content = document.getElementById("content");
 function createElements() {
@@ -35,14 +34,22 @@ function createElements() {
     liArray[4].appendChild(button);
     button.textContent = "Reservation";
 
-    // div id="main"
     const main = document.createElement("div");
     content.append(main);
     main.setAttribute("id", "main");
-    document.body.style.backgroundImage = img1;
-    console.log(img1);
 
-    createHomeTab(liArray);
-    createMenuTab(liArray);
+    const image1 = new Image();
+    image1.src = img;
+    main.appendChild(image1);
+    image1.setAttribute("id", "image1");
+
+    const hello = document.createElement("h1");
+    main.append(hello);
+    hello.textContent = "Sushi Workshop";
+    
+    createHomeTab(liArray, hello, image1);
+    createMenuTab(liArray, hello, image1);
 }
+
 createElements();
+

@@ -45,18 +45,17 @@ q:before, q:after {
   text-decoration: none;
   color: wheat;
 }
+h1 {
+  font-size: 50px;
+  padding:16px;
+  text-align:center;
+}
 #content {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
   
-}
-h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 70px;
 }
 #main {
   display: flex;
@@ -83,6 +82,11 @@ a:hover,button:hover {
   border-radius: 30px;
   cursor: pointer;
 }
+#image1 {
+  border-radius: 50px;
+  padding-top: 20px; 
+  padding-bottom: 20px;
+}
 #header {
   display: flex;
   gap: 20px;
@@ -91,7 +95,7 @@ a:hover,button:hover {
 li {
   font-size: 25px;
 }
-#story {
+#story, #menuDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,7 +104,28 @@ li {
   padding-top: 50px;
   gap: 20px;
 }
-
+#menuDivTxt {
+  font-size: 30px;
+}
+#recipe1, #recipe2, #recipe3 {
+  padding: 32px;
+  text-align: center;
+  border-radius: 50px;
+  width: 380px;
+  height: 153px;
+}
+#recipe1 {
+  background-image: url("hosomaki.jpg");
+  background-size: cover;
+}
+#recipe2 {
+  background-image: url("sashimi.jpg");
+  background-size: cover;
+}
+#recipe3{
+  background-image: url("miso\ soup.jpg");
+  background-size: cover;
+}
 #hours {
   display: flex;
   font-size: 30px;
