@@ -1,7 +1,7 @@
 import _, { last } from 'lodash';
 import './style.css';
 import Logo from './logo.png';
-import img1 from "./painting-sushi-plate-with-picture-fish-it.jpg"
+import img1 from './sushi.jpg';
 import { createHomeTab } from "./home.js";
 import { createMenuTab } from "./menu.js";
 
@@ -39,15 +39,9 @@ function createElements() {
     const main = document.createElement("div");
     content.append(main);
     main.setAttribute("id", "main");
-        // div id="background-image"
-        const backgroundImg = document.createElement("div");
-        main.appendChild(backgroundImg);
-        main.style.backgroundImage = img1;
-        backgroundImg.setAttribute("id", "background-image");
-        console.log(img1);
-            const imgTxt = document.createElement("div");
-            backgroundImg.appendChild(imgTxt);
-            imgTxt.setAttribute("id", "image-text");
+    document.body.style.backgroundImage = img1;
+    console.log(img1);
+
     createHomeTab(liArray);
     createMenuTab(liArray);
 }

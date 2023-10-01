@@ -27,7 +27,7 @@ function createHomeTab(liArray) {
             hours.appendChild(table);
             const program = [
                                 { Day: "Sunday", Program: "Closed"},
-                                { Day: "Monday", Program: "12-8pm"},
+                                { Day: "Monday", Program: "Closed"},
                                 { Day: "Tuesday", Program: "12-8pm"},
                                 { Day: "Wednesday", Program: "12-8pm"},
                                 { Day: "Thursday", Program: "12-8pm"},
