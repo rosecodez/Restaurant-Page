@@ -1,55 +1,18 @@
 import _, { last } from 'lodash';
 import './style.css';
-import Logo from './logo.png';
-import img from './homeimage.jpeg';
-import { createHomeTab } from "./home.js";
-import { createMenuTab } from "./menu.js";
+import { createElements } from "./initial page-load.js";
+import { createProgram } from "./hoursTable.js";
 
 let content = document.getElementById("content");
-function createElements() {
-    // ol id="header"
-    const ol = document.createElement("ol");
-    content.appendChild(ol);
-    ol.setAttribute("id", "header")
-    // loop li, a href 6 times and append to ol
-    let liArray = [];
-    for (let i = 1; i <= 5; i++) {
-        let li = document.createElement("li");
-        ol.appendChild(li);
-        let a = document.createElement("a");
-        li.appendChild(a);
-        liArray.push(li);
-    }
-    for (let i = 0; i < liArray.length; i++) {
-        console.log(liArray[i]);
-    }
-
-    const logo = new Image();
-    logo.src = Logo;
-    liArray[0].appendChild(logo);
-    logo.setAttribute("id", "logo");
-    
-    liArray[3].textContent = "Contact";
-    const button = document.createElement("button");
-    liArray[4].appendChild(button);
-    button.textContent = "Reservation";
-
-    const main = document.createElement("div");
-    content.append(main);
-    main.setAttribute("id", "main");
-
-    const image1 = new Image();
-    image1.src = img;
-    main.appendChild(image1);
-    image1.setAttribute("id", "image1");
-
-    const hello = document.createElement("h1");
-    main.append(hello);
-    hello.textContent = "Sushi Workshop";
-    
-    createHomeTab(liArray, hello, image1);
-    createMenuTab(liArray, hello, image1);
-}
-
 createElements();
+
+liArray[1].onclick = function() {
+    hello.remove();
+    image1.remove();
+}
+liArray[2].onclick = function() {
+    hello.remove();
+    image1.remove();
+    createProgram(liArray);
+}
 
