@@ -45,6 +45,7 @@ function createElements() {
     
     createHomeTab(liArray, hello, image1);
     createMenuTab(liArray, hello, image1);
-    console.log(liArray);
+    return [liArray, hello, image1];
 }
+
 export { createElements };
