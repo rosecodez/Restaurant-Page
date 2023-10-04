@@ -18,7 +18,7 @@ function createProgram(liArray) {
                       { Day: "Friday", Program: "12-10pm"},
                       { Day: "Saturday", Program: "12-10pm"},
                     ];
-
+                    
     function generateTableHead(table, data) {
       let thead = table.createTHead();
       let row = thead.insertRow();

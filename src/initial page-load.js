@@ -42,10 +42,10 @@ function createElements() {
     const hello = document.createElement("h1");
     main.append(hello);
     hello.textContent = "Sushi Workshop";
-    
+
     createHomeTab(liArray, hello, image1);
     createMenuTab(liArray, hello, image1);
-    return [liArray, hello, image1];
+    return [liArray, hello, image1, main];
 }
 
 export { createElements };
