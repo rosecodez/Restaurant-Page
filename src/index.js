@@ -1,30 +1,24 @@
 import _, { create, last } from 'lodash';
 import './style.css';
-import { createElements } from "./initial page-load.js";
-import { createProgram } from "./hoursTable.js";
-import { createMenu } from "./menu.js";
+import { createElements } from './initial page-load.js';
+import { createProgram } from './hoursTable.js';
+import { createMenu } from './menu.js';
+import { createHomeContent } from './home.js';
 
-let content = document.getElementById("content");
-function getElements() {
-    const a = liArray;
-    const b = hello;
-    const c = image1;
-    return [a, b, c];
-}
-const [x,y,z] = getElements();``
-console.log(x)
-console.log(y);
-console.log(z);
+const content = document.getElementById('content');
 
-console.log(a);
-console.log(b);
-console.log(c);
+const array = createElements();
+const liArray = array[0];
+const hello = array[1];
+const image1 = array[2];
+const main = array[3];
 
-liArray[1].onclick = function() {
-    hello.style.display = "none";
-    image1.style.display = "none";
-}
-liArray[2].onclick = function() {
-    createProgram(liArray);
-    createMenu();
-}
+liArray[1].onclick = function () {
+  main.innerHTML = '';
+  createHomeContent();
+  createProgram();
+};
+liArray[2].onclick = function () {
+  main.innerHTML = '';
+  createMenu();
+};
